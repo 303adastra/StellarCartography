@@ -1,7 +1,7 @@
 Class {
 	#name : #EarthTests,
 	#superclass : #TestCase,
-	#category : #'Stellar-Cartography-Tests'
+	#category : #'StellarCartography-Tests'
 }
 
 { #category : #tests }

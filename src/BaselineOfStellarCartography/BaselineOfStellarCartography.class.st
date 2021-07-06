@@ -9,5 +9,5 @@ BaselineOfStellarCartography >> baseline: spec [
 	"baseline"
 
 	<baseline>
-	spec for: #common do: [ "Packages" spec package: 'Stellar-Cartography' ]
+	spec for: #common do: [ "Packages" spec package: 'StellarCartography' ]
 ]

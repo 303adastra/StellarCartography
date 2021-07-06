@@ -1,7 +1,7 @@
 Class {
 	#name : #Earth,
 	#superclass : #Object,
-	#category : #'Stellar-Cartography'
+	#category : #StellarCartography
 }
 
 { #category : #'as yet unclassified' }
