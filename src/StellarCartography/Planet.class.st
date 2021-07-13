@@ -11,5 +11,5 @@ Planet class >> rotationPeriod [
 
 { #category : #accesing }
 Planet >> rotationPeriod [
-	^ self subclassResponsibility
+	^ self class rotationPeriod 
 ]
