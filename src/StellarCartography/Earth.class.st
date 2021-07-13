@@ -1,6 +1,6 @@
 Class {
 	#name : #Earth,
-	#superclass : #Object,
+	#superclass : #Planet,
 	#category : #StellarCartography
 }
 
