@@ -10,3 +10,9 @@ Earth class >> rotationPeriod [
 
 	^ 23 hours + 56 minutes + 4 seconds
 ]
+
+{ #category : #accessing }
+Earth >> rotationPeriod [
+
+	^ self class rotationPeriod
+]
