@@ -1,15 +1,14 @@
 Class {
 	#name : #Planet,
 	#superclass : #Object,
+	#instVars : [
+		'hp',
+		'ha'
+	],
 	#category : #StellarCartography
 }
 
-{ #category : #accesing }
+{ #category : #accessing }
 Planet class >> rotationPeriod [
 	^ self subclassResponsibility
-]
-
-{ #category : #accesing }
-Planet >> rotationPeriod [
-	^ self class rotationPeriod 
 ]

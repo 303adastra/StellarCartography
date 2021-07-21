@@ -4,7 +4,7 @@ Class {
 	#category : #StellarCartography
 }
 
-{ #category : #accesing }
+{ #category : #accessing }
 Earth class >> rotationPeriod [
 	"returns the Earth's rotation period as a duration"
 
