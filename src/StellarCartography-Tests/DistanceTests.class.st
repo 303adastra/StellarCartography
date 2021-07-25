@@ -36,6 +36,24 @@ DistanceTests >> testDividedByInteger [
 ]
 
 { #category : #tests }
+DistanceTests >> testKilometers [
+
+	self assert: 1000 meter equals: 1 kilometer.
+	self assert: 1000 meters equals: 1 kilometers.
+	self assert: 2000.0 meter equals: 2.0 kilometer.
+	self assert: 2000.0 meters equals: 2.0 kilometers
+]
+
+{ #category : #tests }
+DistanceTests >> testMillimeters [
+
+	self assert: 1000 millimeter equals: 1 meter.
+	self assert: 1000 millimeters equals: 1 meters.
+	self assert: 2000.0 millimeter equals: 2.0 meter.
+	self assert: 2000.0 millimeters equals: 2.0 meters
+]
+
+{ #category : #tests }
 DistanceTests >> testMultipliedByInteger [
 
 	self assert: -4.4e26 meters * 2 equals: -8.8e26 meters.
@@ -50,6 +68,14 @@ DistanceTests >> testMultipliedByInteger [
 DistanceTests >> testOneMeterEvaluatesToOneMeter [
 
 	self assert: 1 meter equals: 1 meter
+]
+
+{ #category : #tests }
+DistanceTests >> testRaisedTo [
+
+	self assert: (2 meters raisedTo: 3) equals: (Quantity new
+			 value: 8
+			 units: (Dictionary newFrom: { ('meters' -> 3) }))
 ]
 
 { #category : #tests }
