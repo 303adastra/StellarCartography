@@ -5,6 +5,14 @@ Class {
 }
 
 { #category : #tests }
+EarthTests >> testEarthOrbitalPeriod [
+
+	self
+		assert: (Earth new orbitalPeriod asDays round: 1)
+		equals: (365.26 days asDays round: 1)
+]
+
+{ #category : #tests }
 EarthTests >> testEarthRotationPeriodClassMethod [
 	| rotationPeriod |
 	rotationPeriod := Earth rotationPeriod.
