@@ -72,7 +72,7 @@ Quantity >> + aQuantity [
 
 	units = aQuantity units
 		ifTrue: [ 
-		^ Quantity new value: value + aQuantity value units: units ]
+		^ self class new value: value + aQuantity value units: units ]
 		ifFalse: [ 
 		self error: 'adding Quantity objects must have the same units' ]
 ]
@@ -82,7 +82,7 @@ Quantity >> - aQuantity [
 
 	units = aQuantity units
 		ifTrue: [ 
-		^ Quantity new value: value - aQuantity value units: units ]
+		^ self class new value: value - aQuantity value units: units ]
 		ifFalse: [ 
 		self error: 'adding Quantity objects must have the same units' ]
 ]
