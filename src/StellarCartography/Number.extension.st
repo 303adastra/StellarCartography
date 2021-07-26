@@ -37,9 +37,7 @@ Number >> kilometer [
 { #category : #'*StellarCartography' }
 Number >> kilometers [
 
-	^ Quantity new
-		  value: self * 1000
-		  units: (Dictionary newFrom: { ('meters' -> 1) })
+	^ self meters * 1e3
 ]
 
 { #category : #'*StellarCartography' }
@@ -65,7 +63,5 @@ Number >> millimeter [
 { #category : #'*StellarCartography' }
 Number >> millimeters [
 
-	^ Quantity new
-		  value: self / 1000
-		  units: (Dictionary newFrom: { ('meters' -> 1) })
+	^ self meters * 1e-3
 ]
