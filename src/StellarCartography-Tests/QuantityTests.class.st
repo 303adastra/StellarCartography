@@ -5,6 +5,12 @@ Class {
 }
 
 { #category : #tests }
+QuantityTests >> testComparisonOperators [
+
+	self assert: 2 meters / 1 second > (1 meter / 1 second) equals: true
+]
+
+{ #category : #tests }
 QuantityTests >> testMomentum [
 
 	| mass distance duration velocity momentum |
