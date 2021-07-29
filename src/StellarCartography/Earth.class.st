@@ -1,10 +1,16 @@
 Class {
 	#name : #Earth,
 	#superclass : #Planet,
-	#traits : 'TCelestialBody',
-	#classTraits : 'TCelestialBody classTrait',
 	#category : #StellarCartography
 }
+
+{ #category : #'as yet unclassified' }
+Earth class >> orbitalPeriod [
+
+	"Earth's sidereal period around the Sun, based on astrometric observations"
+
+	^ 365.25636 days
+]
 
 { #category : #'as yet unclassified' }
 Earth class >> primary [
@@ -23,6 +29,12 @@ Earth class >> rotationPeriod [
 Earth class >> semimajorAxis [
 
 	^ 149.60e6 kilometers
+]
+
+{ #category : #'as yet unclassified' }
+Earth >> orbitalPeriod [
+
+	^ self class orbitalPeriod
 ]
 
 { #category : #'as yet unclassified' }
