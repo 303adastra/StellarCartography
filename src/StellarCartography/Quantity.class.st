@@ -124,6 +124,24 @@ Quantity >> / anOperand [
 	^ self class new value: value / anOperand units: units
 ]
 
+{ #category : #arithmetic }
+Quantity >> < aQuantity [
+
+	units = aQuantity units
+		ifTrue: [ ^ self value < aQuantity value ]
+		ifFalse: [ 
+		self error: 'Argument must have the same units as receiver' ]
+]
+
+{ #category : #arithmetic }
+Quantity >> <= aQuantity [
+
+	units = aQuantity units
+		ifTrue: [ ^ self value <= aQuantity value ]
+		ifFalse: [ 
+		self error: 'Argument must have the same units as receiver' ]
+]
+
 { #category : #comparing }
 Quantity >> = aQuantity [
 
@@ -131,6 +149,24 @@ Quantity >> = aQuantity [
 	receiver is equal to the argument. Otherwise answer false."
 
 	^ self value = aQuantity value & (self units = aQuantity units)
+]
+
+{ #category : #arithmetic }
+Quantity >> > aQuantity [
+
+	units = aQuantity units
+		ifTrue: [ ^ self value > aQuantity value ]
+		ifFalse: [ 
+		self error: 'Argument must have the same units as receiver' ]
+]
+
+{ #category : #arithmetic }
+Quantity >> >= aQuantity [
+
+	units = aQuantity units
+		ifTrue: [ ^ self value >= aQuantity value ]
+		ifFalse: [ 
+		self error: 'Argument must have the same units as receiver' ]
 ]
 
 { #category : #initialization }
