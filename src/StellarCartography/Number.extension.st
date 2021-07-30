@@ -1,6 +1,34 @@
 Extension { #name : #Number }
 
 { #category : #'*StellarCartography' }
+Number >> ampere [
+
+	^ self amperes
+]
+
+{ #category : #'*StellarCartography' }
+Number >> amperes [
+
+	^ Quantity new
+		  value: self
+		  units: (Dictionary newFrom: { ('amperes' -> 1) })
+]
+
+{ #category : #'*StellarCartography' }
+Number >> candela [
+
+	^ self candelas
+]
+
+{ #category : #'*StellarCartography' }
+Number >> candelas [
+
+	^ Quantity new
+		  value: self
+		  units: (Dictionary newFrom: { ('candelas' -> 1) })
+]
+
+{ #category : #'*StellarCartography' }
 Number >> cubicmeter [
 
 	^ self cubicmeters
@@ -12,6 +40,14 @@ Number >> cubicmeters [
 	^ Quantity new
 		  value: self
 		  units: (Dictionary newFrom: { ('meters' -> 3) })
+]
+
+{ #category : #'*StellarCartography' }
+Number >> kelvin [
+
+	^ Quantity new
+		  value: self
+		  units: (Dictionary newFrom: { ('kelvin' -> 1) })
 ]
 
 { #category : #'*StellarCartography' }
@@ -64,4 +100,18 @@ Number >> millimeter [
 Number >> millimeters [
 
 	^ self meters * 1e-3
+]
+
+{ #category : #'*StellarCartography' }
+Number >> mole [
+
+	^ self moles
+]
+
+{ #category : #'*StellarCartography' }
+Number >> moles [
+
+	^ Quantity new
+		  value: self
+		  units: (Dictionary newFrom: { ('moles' -> 1) })
 ]
