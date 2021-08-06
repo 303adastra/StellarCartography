@@ -1,5 +1,5 @@
 Class {
-	#name : #Star,
+	#name : #SCStar,
 	#superclass : #Object,
 	#category : #StellarCartography
 }

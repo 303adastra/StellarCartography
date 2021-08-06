@@ -1,11 +1,11 @@
 Class {
-	#name : #Sun,
-	#superclass : #Star,
+	#name : #SCSun,
+	#superclass : #SCStar,
 	#category : #StellarCartography
 }
 
 { #category : #'as yet unclassified' }
-Sun class >> mass [
+SCSun class >> mass [
 
 	"returns the mass of the sun as a Mass object"
 
@@ -13,7 +13,7 @@ Sun class >> mass [
 ]
 
 { #category : #'as yet unclassified' }
-Sun >> mass [
+SCSun >> mass [
 
 	^ self class mass
 ]

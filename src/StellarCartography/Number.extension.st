@@ -9,7 +9,7 @@ Number >> ampere [
 { #category : #'*StellarCartography' }
 Number >> amperes [
 
-	^ Quantity new
+	^ SCQuantity new
 		  value: self
 		  units: (Dictionary newFrom: { ('amperes' -> 1) })
 ]
@@ -23,7 +23,7 @@ Number >> candela [
 { #category : #'*StellarCartography' }
 Number >> candelas [
 
-	^ Quantity new
+	^ SCQuantity new
 		  value: self
 		  units: (Dictionary newFrom: { ('candelas' -> 1) })
 ]
@@ -37,7 +37,7 @@ Number >> cubicmeter [
 { #category : #'*StellarCartography' }
 Number >> cubicmeters [
 
-	^ Quantity new
+	^ SCQuantity new
 		  value: self
 		  units: (Dictionary newFrom: { ('meters' -> 3) })
 ]
@@ -45,7 +45,7 @@ Number >> cubicmeters [
 { #category : #'*StellarCartography' }
 Number >> kelvin [
 
-	^ Quantity new
+	^ SCQuantity new
 		  value: self
 		  units: (Dictionary newFrom: { ('kelvin' -> 1) })
 ]
@@ -59,7 +59,7 @@ Number >> kilogram [
 { #category : #'*StellarCartography' }
 Number >> kilograms [
 
-	^ Quantity new
+	^ SCQuantity new
 		  value: self
 		  units: (Dictionary newFrom: { ('kilograms' -> 1) })
 ]
@@ -85,7 +85,7 @@ Number >> meter [
 { #category : #'*StellarCartography' }
 Number >> meters [
 
-	^ Quantity new
+	^ SCQuantity new
 		  value: self
 		  units: (Dictionary newFrom: { ('meters' -> 1) })
 ]
@@ -111,7 +111,7 @@ Number >> mole [
 { #category : #'*StellarCartography' }
 Number >> moles [
 
-	^ Quantity new
+	^ SCQuantity new
 		  value: self
 		  units: (Dictionary newFrom: { ('moles' -> 1) })
 ]

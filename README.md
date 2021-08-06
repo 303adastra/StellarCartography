@@ -42,12 +42,14 @@ Metacello new baseline: 'StellarCartography';
 
 Note: Evaluate by highlighting the text, then either right-click on the highlighted text and click `Do it` or press `Ctrl+D`.
 
-## Accessing parameters for celestial objects
+## Example Usage
 
 Once the `StellarCartography` package has been loaded into your Pharo image, you can highlight the following text in a Playground window and click 'Print it' or press 'Ctrl+P' to evaluate and print the Earth's rotation period:
 
 ```smalltalk
-Earth rotationPeriod.
+|earth|
+earth := SCEarth new.
+earth rotationPeriod.
 ```
 
-Note: Evaluating the above expression returns a `Duration` that prints as `0:23:56:04`. `Duration` objects can also be expressed as a unit of time, e.g., `Earth rotationPeriod asSeconds`.
+Note: Evaluating the above expression returns a `Duration` that prints as `0:23:56:04`. `Duration` objects can also be expressed as a unit of time, e.g., `earth rotationPeriod asSeconds`.

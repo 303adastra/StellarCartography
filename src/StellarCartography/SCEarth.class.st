@@ -1,42 +1,42 @@
 Class {
-	#name : #Earth,
-	#superclass : #Planet,
+	#name : #SCEarth,
+	#superclass : #SCPlanet,
 	#category : #StellarCartography
 }
 
 { #category : #'as yet unclassified' }
-Earth class >> primary [
+SCEarth class >> primary [
 
-	^ Sun
+	^ SCSun
 ]
 
 { #category : #accessing }
-Earth class >> rotationPeriod [
+SCEarth class >> rotationPeriod [
 	"returns the Earth's rotation period as a duration"
 
 	^ 23 hours + 56 minutes + 4 seconds
 ]
 
 { #category : #'as yet unclassified' }
-Earth class >> semimajorAxis [
+SCEarth class >> semimajorAxis [
 
 	^ 149.60e6 kilometers
 ]
 
 { #category : #'as yet unclassified' }
-Earth >> primary [
+SCEarth >> primary [
 
 	^ self class primary
 ]
 
 { #category : #accessing }
-Earth >> rotationPeriod [
+SCEarth >> rotationPeriod [
 
 	^ self class rotationPeriod
 ]
 
 { #category : #'as yet unclassified' }
-Earth >> semimajorAxis [
+SCEarth >> semimajorAxis [
 
 	^ self class semimajorAxis
 ]

@@ -1,17 +1,17 @@
 Class {
-	#name : #QuantityTests,
+	#name : #SCQuantityTests,
 	#superclass : #TestCase,
 	#category : #'StellarCartography-Tests'
 }
 
 { #category : #tests }
-QuantityTests >> testComparisonOperators [
+SCQuantityTests >> testComparisonOperators [
 
 	self assert: 2 meters / 1 second > (1 meter / 1 second) equals: true
 ]
 
 { #category : #tests }
-QuantityTests >> testMomentum [
+SCQuantityTests >> testMomentum [
 
 	| mass distance duration velocity momentum |
 	mass := 3175 kilograms.
@@ -32,7 +32,7 @@ QuantityTests >> testMomentum [
 ]
 
 { #category : #tests }
-QuantityTests >> testVelocity [
+SCQuantityTests >> testVelocity [
 
 	| distance duration velocity |
 	distance := 344 meters.

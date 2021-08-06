@@ -21,7 +21,7 @@ Internal Representation and Key Implementation Points.
 	Quantity objects are created by passing unary messages to Integer or Float objects.
 "
 Class {
-	#name : #Quantity,
+	#name : #SCQuantity,
 	#superclass : #Magnitude,
 	#instVars : [
 		'value',
@@ -31,7 +31,7 @@ Class {
 }
 
 { #category : #arithmetic }
-Quantity >> * anOperand [
+SCQuantity >> * anOperand [
 
 	| aQuantity newUnits unitKeys |
 	"Temporarily treat operand as a Quantity"
@@ -68,7 +68,7 @@ Quantity >> * anOperand [
 ]
 
 { #category : #arithmetic }
-Quantity >> + aQuantity [
+SCQuantity >> + aQuantity [
 
 	units = aQuantity units
 		ifTrue: [ 
@@ -78,7 +78,7 @@ Quantity >> + aQuantity [
 ]
 
 { #category : #arithmetic }
-Quantity >> - aQuantity [
+SCQuantity >> - aQuantity [
 
 	units = aQuantity units
 		ifTrue: [ 
@@ -88,7 +88,7 @@ Quantity >> - aQuantity [
 ]
 
 { #category : #arithmetic }
-Quantity >> / anOperand [
+SCQuantity >> / anOperand [
 
 	| aQuantity newUnits unitKeys |
 	"Temporarily treat operand as a Quantity"
@@ -125,7 +125,7 @@ Quantity >> / anOperand [
 ]
 
 { #category : #arithmetic }
-Quantity >> < aQuantity [
+SCQuantity >> < aQuantity [
 
 	units = aQuantity units
 		ifTrue: [ ^ self value < aQuantity value ]
@@ -134,7 +134,7 @@ Quantity >> < aQuantity [
 ]
 
 { #category : #arithmetic }
-Quantity >> <= aQuantity [
+SCQuantity >> <= aQuantity [
 
 	units = aQuantity units
 		ifTrue: [ ^ self value <= aQuantity value ]
@@ -143,7 +143,7 @@ Quantity >> <= aQuantity [
 ]
 
 { #category : #comparing }
-Quantity >> = aQuantity [
+SCQuantity >> = aQuantity [
 
 	"Compare the receiver with the argument and answer with true if the 
 	receiver is equal to the argument. Otherwise answer false."
@@ -152,7 +152,7 @@ Quantity >> = aQuantity [
 ]
 
 { #category : #arithmetic }
-Quantity >> > aQuantity [
+SCQuantity >> > aQuantity [
 
 	units = aQuantity units
 		ifTrue: [ ^ self value > aQuantity value ]
@@ -161,7 +161,7 @@ Quantity >> > aQuantity [
 ]
 
 { #category : #arithmetic }
-Quantity >> >= aQuantity [
+SCQuantity >> >= aQuantity [
 
 	units = aQuantity units
 		ifTrue: [ ^ self value >= aQuantity value ]
@@ -170,7 +170,7 @@ Quantity >> >= aQuantity [
 ]
 
 { #category : #initialization }
-Quantity >> initialize [
+SCQuantity >> initialize [
 
 	"Initialize new instance of Quantity with dictionary of the seven SI base units"
 
@@ -185,7 +185,7 @@ Quantity >> initialize [
 ]
 
 { #category : #'mathematical functions' }
-Quantity >> raisedTo: aNumber [
+SCQuantity >> raisedTo: aNumber [
 
 	| newUnits unitKeys newQuantity |
 	newUnits := Dictionary newFrom: {  }.
@@ -207,19 +207,19 @@ Quantity >> raisedTo: aNumber [
 ]
 
 { #category : #accessing }
-Quantity >> units [
+SCQuantity >> units [
 
 	^ units
 ]
 
 { #category : #accessing }
-Quantity >> value [
+SCQuantity >> value [
 
 	^ value
 ]
 
 { #category : #'as yet unclassified' }
-Quantity >> value: aNumber units: aUnitDictionary [
+SCQuantity >> value: aNumber units: aUnitDictionary [
 
 	| newUnits |
 	value := aNumber.
