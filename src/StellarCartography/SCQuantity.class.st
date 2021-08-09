@@ -184,6 +184,30 @@ SCQuantity >> initialize [
 			         ('candelas' -> 0) }
 ]
 
+{ #category : #printing }
+SCQuantity >> printOn: aStream [
+
+	"an instance of Quantity should print a value and a unit"
+
+	| returnValue returnUnits unitsStream |
+	returnValue := self value asString.
+	unitsStream := String new writeStream.
+
+	self units associationsDo: [ :pair | 
+		pair value = 0 ifFalse: [ 
+			unitsStream
+				nextPutAll: pair key asString;
+				nextPutAll: '^';
+				nextPutAll: pair value asString;
+				nextPutAll: ' ' ] ].
+
+	returnUnits := unitsStream contents asString.
+	aStream
+		nextPutAll: returnValue;
+		nextPutAll: ' ';
+		nextPutAll: returnUnits
+]
+
 { #category : #'mathematical functions' }
 SCQuantity >> raisedTo: aNumber [
 
